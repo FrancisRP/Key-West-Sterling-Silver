@@ -1,0 +1,68 @@
+.site-main{
+    .fl-rich-text {    
+        ul{
+            list-style-type: none;
+            padding-inline-start: 20px;
+            li{
+                &:before {
+                    content: "\25AA"; 
+                    color: $primary--light;
+                    display: inline-block; 
+                    width: 1em;
+                    margin-left: -1rem;
+                }
+                a{
+                    color:$dark-gray;
+                    font-family: $heading-font-family;
+                    font-weight:$font-weight-normal;
+                    &:hover{
+                        color:$primary--light;
+                    }
+                }
+               
+            }
+        }//ul
+        ol {
+            list-style-type: none; 
+            counter-reset: li;
+            padding-inline-start: 20px;
+            li{
+                &:before {
+                content: counter(li); 
+                color: $primary--light;
+                font-weight:$font-weight-medium;
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1.5rem;
+                margin-right: 1rem; 
+                text-align: right; 
+                direction: rtl;
+                }
+                counter-increment: li;
+            }
+        }
+        ol {
+           &.circle{
+            padding-inline-start: 20px;
+            list-style-type: none; 
+            counter-reset: li;
+                li{
+                    &:before {
+                    content: counter(li); 
+                    color: $white;
+                    background: $primary--light;
+                    border-radius: 50%;
+                    font-weight:$font-weight-medium;
+                    display: inline-block; 
+                    width: 2rem;
+                    margin-left: -1.5em;
+                    margin-right: 1em; 
+                    text-align: center; 
+                    direction: rtl;
+                    }
+                    counter-increment: li;
+                }
+           }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.border-sm{
+    @include media-breakpoint-up(sm) {
+         // Larger than 576px
+        border:1px solid;
+    }
+}
+.border-md{
+    @include media-breakpoint-up(md) {
+         // Larger than 768px
+        border:1px solid;
+    }
+}
+.border-lg{
+    @include media-breakpoint-up(lg) {
+         // Larger than 992px
+        border:1px solid;
+    }
+}
+
+.border-xl{
+    @include media-breakpoint-up(xl) {
+         // Larger than 1200px
+        border:1px solid;
+    }
+}
+
+/*========= Border Right =========*/
+.border-sm-right{
+    @include media-breakpoint-up(sm) {
+         // Larger than 576px
+        border-right:1px solid;
+    }
+}
+.border-md-right{
+    @include media-breakpoint-up(md) {
+         // Larger than 768px
+        border-right:1px solid;
+    }
+}
+.border-lg-right{
+    @include media-breakpoint-up(lg) {
+         // Larger than 992px
+        border-right:1px solid;
+    }
+}
+
+.border-xl-right{
+    @include media-breakpoint-up(xl) {
+         // Larger than 1200px
+         border-right:1px solid;
+    }
+}
+

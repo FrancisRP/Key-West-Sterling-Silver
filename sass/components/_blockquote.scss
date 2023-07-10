@@ -1,0 +1,32 @@
+blockquote{
+    padding:30px;
+    border:1px solid $primary--light;
+    font-style: italic;
+    font-weight:$font-weight-normal;
+    font-family:$heading-font-family;
+    &:before{
+        display: block;
+        content: ' ';
+        background-image: url('/wp-content/uploads/2020/05/quote.svg');
+        background-size: 32px 32px;
+        height: 32px;
+        width: 32px;
+        top: -45px;
+        position: relative;
+    }
+    footer{
+        font-style: normal;
+        margin-bottom:30px;
+        p{
+            margin-bottom:0;
+        }
+    }
+    img{
+        width:70px;
+        float:left;
+        max-width: 100%;
+        height: auto;
+        border-radius:50%;
+        margin-right:10px;
+    }
+}

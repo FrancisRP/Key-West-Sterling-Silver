@@ -1,0 +1,42 @@
+.slideout-navicon {
+	padding: 20px;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.slideout-nav {
+	background: $dark-gray;
+	color:$white;
+	height: 100vh;
+	left: -400px;
+	position: absolute;
+	top: 0;
+	width: 300px;
+	z-index: 70;
+	transition: left 0.3s ease-out;
+	&__inner {
+		height: 100%;
+	}
+	.navicon-close {
+		display: flex;
+		justify-content: flex-end;
+		i {
+			border-radius: 100%;
+			color: $dark-gray;
+			font-size: 22px;
+			transition: all $transition_fast;
+			cursor: pointer;
+			&:hover {
+				color:#669900;
+			}
+		}
+	}
+}
+
+.slideout-nav--open {
+	left: 0 !important;
+}
+
+.body--overflow-hide {
+	overflow: hidden;
+}

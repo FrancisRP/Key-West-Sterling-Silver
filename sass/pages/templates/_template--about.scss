@@ -1,0 +1,74 @@
+.section-about {
+    @include mq("tablet") {
+        @include gradient-horizontal-two-colors(right, $gray-100 0%, $gray-100 50%, $white 50%, $white 100%);
+        .left-column {
+            > .fl-col-content {
+                margin-right: 40px;
+            }
+        }
+        .right-column {
+            > .fl-col-content {
+                margin-left: 40px;
+            }
+        }
+    } //tablet
+    &__content-slider {
+        .slider-services {
+            .fl-slide-content {
+                h2 {
+                    &.fl-slide-title {
+                        @include font(35px);
+                        font-weight: $font-weight-medium;
+                        font-family: $heading-font-family;
+                        color: $black;
+                        line-height: 45px;
+                        text-transform: uppercase;
+                        &:after {
+                            content: "";
+                            width: 70px;
+                            height: 3px;
+                            position: relative;
+                            left: 50%;
+                            bottom: -20px;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            background: $primary;
+                        }
+                    }
+                } //h2
+                .fl-slide-text {
+                    padding-top: 20px;
+                }
+            } //fl-slide-content
+            .bx-wrapper {
+                .bx-pager {
+                    &.bx-default-pager {
+                        color: $gray-600;
+                        padding-top: 0;
+                        bottom: 120px;
+                        a {
+                            background: $gray-600 !important;
+                            &.active,
+                            &:focus,
+                            &:hover {
+                                background: $primary !important;
+                            }
+                        }
+                    }
+                }
+            } //bx-wrapper
+        } //slider-services
+    } //content slider
+    &__history {
+        .left-column {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &__team {
+        .olw-teams-slider {
+          
+            
+        }
+    }
+}

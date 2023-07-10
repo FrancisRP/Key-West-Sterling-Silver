@@ -1,0 +1,207 @@
+// Default HTML form styling
+form {
+    label {
+        @include font(1.8rem);
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"] {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 0;
+        font-family: $base-font-family;
+        ::placeholder{
+            color:$gray-600;
+        }
+    }
+    input[type="submit"], input[type="reset"] {
+        @include font(1.8rem);
+    }
+    textarea {
+        padding: 12px 20px;
+        border: 0;
+        font-family: $base-font-family;
+        width: 100%;
+        ::placeholder{
+            color:$gray-600;
+        }
+    }
+}
+
+// Gravity form defaults
+.gform_wrapper {
+    .hidden_label {
+        > label {
+            @include sr-only;
+        }
+    }
+    .gform_required_legend,
+    .gform_validation_container {
+        @include sr-only;
+    }
+    .gfield_validation_message {
+        color: red;
+    }
+    .gform_body {
+        .gfield {
+            list-style: none;
+            input {
+                padding: 16px 20px;
+                margin-bottom: 11px !important;
+                &::placeholder {
+                    font-size: 18px;
+                    font-family: $footer-font-family;
+                    color: $black;
+                }
+            }
+
+            textarea {
+                padding: 16px 20px;
+                margin-bottom: 11px !important;
+                &::placeholder {
+                    font-size: 18px;
+                    font-family: $footer-font-family;
+                    color: $black;
+                }
+            }
+        }
+    }
+    .gform_footer {
+        margin-top: 20px; 
+        text-align: center !important;
+        .gform_button {
+            padding: 13px 20px !important;
+            border-radius: 0 !important;
+            cursor: pointer !important;
+            width: 20% !important;
+            font-family: "Montserrat" !important;
+            color: #fff !important;
+            border: 1px solid transparent !important;
+            font-size: calc(18px/1.2);
+            text-transform: capitalize !important;
+            background-color: #000 !important;
+            &:hover {
+                background-color: #fff !important;
+                border: 1px solid #000 !important;
+                color: #000 !important;
+            }
+        }
+    }
+}
+
+// Side-by-side flex fields
+.flex-fields--2-col {
+    @include mq('tablet-wide') {    
+        .gform_wrapper {
+            .gform_fields {
+                display: flex;
+                flex-wrap: wrap;
+                .gfield {
+                    flex: 50%;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.flex-fields--3-col {
+    @include mq('tablet-wide') {    
+        .gform_wrapper {
+            .gform_fields {
+                display: flex;
+                flex-wrap: wrap;
+                .gfield {
+                    flex: 33%;
+                    padding: 0 10px;
+                }
+            }
+        }
+        // Message field
+        #field_1_4 {
+            width: 100%;
+            flex: 100%;
+        }
+    }
+}
+
+#gform_3 {
+    flex-direction: column;
+    @include mq('tablet-wide')  {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .gform_body {
+        width: 100%;
+        @include mq('tablet-wide') {
+            width: 80%;
+        }
+        ul {
+            padding-left: 0;
+        }
+        input {
+            padding: 16px 20px;
+            margin-bottom: 11px !important;
+            &::placeholder {
+                font-size: 18px;
+                font-family: $footer-font-family;
+                color: $black;
+            }
+        }
+    }
+
+    .gform_footer {
+        width: 100%;
+        margin: 0;
+        @include mq('tablet-wide') {
+            width: 20%;
+            margin-top: -10px;
+        }
+        margin-left: 5px;
+        .gform_button {
+            padding: 14px 20px !important;
+            width: 100% !important;
+            font-family: $footer-font-family;
+            background-color: #000;
+            @include font(18px);
+            text-transform: capitalize !important;
+        }
+    }
+}
+
+.site-footer {
+    #gform_3 {
+        display: block;
+        .gform_body {
+            width: auto;
+        }
+        #gform_fields_3 {
+            input {
+                border-color: #000;
+                border: 1px solid;
+            }
+        }
+        .gform_footer {
+            width: 100%;
+            margin-left: 0;
+            .gform_button {
+                padding: 13px 20px !important;
+                font-family: $footer-font-family;
+                @include font(18px);
+                text-transform: capitalize !important;
+            }
+        }
+    }
+}
+
+.woocommerce #review_form {
+    textarea, input {
+        border: 1px solid #000;
+    }
+}

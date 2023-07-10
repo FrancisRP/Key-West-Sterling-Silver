@@ -1,0 +1,14 @@
+.section-about {
+	&__team {
+		.bx-wrapper {
+			.bx-pager.bx-default-pager {
+				a {
+					background-color: $gray-400;
+				}
+				a.active {
+					background: $primary;
+				}
+			}
+		}
+	}
+}

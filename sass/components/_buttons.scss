@@ -1,0 +1,360 @@
+// Force button theme styles on Beaver Builder button elements
+a.fl-button, .woocommerce a.button, .uabb-woo-product-wrapper button {
+    .fl-button-text {
+        text-transform: capitalize !important;
+        font-weight: 600 !important;
+        font-family: $base-font-family !important;
+       
+        color: $white !important;
+        @include font(1.8rem !important);
+    }
+    
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 17px 31px !important;
+    background: $primary !important;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: $font-weight-semi-bold;
+    color: $white;
+    @include transition(all, 0.2s);
+    &:hover {
+        background: lighten($primary, 20%) !important;
+        color: $white !important;
+    }
+    &:after {
+        content: "\f0da";
+        font-weight: 900;
+        margin-left: 10px;
+        position: relative;
+        transition: 0.3s ease;
+        color: $white;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $fontawesome;
+        margin-left: 10px;
+    }
+}
+
+.btn--hollow {
+    a.fl-button {
+        text-transform: uppercase;
+        font-family: $heading-font-family;
+        border: 1px solid $primary !important;
+        color: $primary !important;
+        padding: 12px 25px;
+        background: transparent !important;
+        * {
+            color: $text-dark !important;
+        }
+        &:hover {
+            background: transparent !important;
+            border: 1px solid $text-dark !important;
+            * {
+                color: $primary !important;
+            }
+        }
+    }
+    &--light {
+        a.fl-button {
+            border: 1px solid #fff !important;
+            * {
+                color: $text-light !important;
+            }
+            &:hover {
+                border: 1px solid $primary !important;
+            }
+        }
+    }
+}
+
+a.btn {
+    text-transform: capitalize;
+    font-family: $base-font-family !important;
+    border-radius: 0;
+    border: 0;
+    color: $black;
+    padding: 14px 25px;
+    background: $primary;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: $font-weight-semi-bold; 
+    @include font(1.8rem);
+    &:hover {
+        background: $hover-dark;
+        color: $white !important;
+    }
+    &:after {
+        content: "\f0da";
+        font-weight: 900;
+        margin-left: 10px;
+        position: relative;
+        transition: 0.3s ease;
+        color: $dark;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $fontawesome;
+        margin-left: 10px;
+    }
+}
+
+a.btn-outline-primary {
+    text-transform: capitalize;
+    font-family: $heading-font-family;
+    border-radius: 0;
+    border: 3px solid $primary;
+    color: $black;
+    padding: 12px 25px;
+    background: transparent !important;
+    &:hover {
+        background: transparent;
+        color: $hover-dark !important;
+        border: 3px solid $hover-dark;
+    }
+    &:after {
+        color: $text-dark;
+    }
+}
+
+
+.btn, a.fl-button, a.fl-button:visited {
+    text-transform: uppercase;
+    font-family: $heading-font-family;
+    border-radius: 0;
+    border: 1px solid $primary;
+}
+.btn-green, .btn-primary {
+    color: $white !important;
+    background: $primary;
+    border-radius: 0;
+    font-family: $heading-font-family;
+    &:after {
+        content: "\f0da";
+        font-weight: 900;
+        margin-left: 10px;
+        position: relative;
+        transition: 0.3s ease;
+        color: $white;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $fontawesome;
+        margin-left: 10px;
+    } //after
+    &:hover {
+        color: $white;
+        background: $dark-gray;
+        &:after {
+            content: "\f0da";
+            font-weight: 900;
+            margin-left: 10px;
+            position: relative;
+            transition: 0.3s ease;
+            color: $white;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: $fontawesome;
+        }
+    }
+}
+
+.btn-black {
+    color: $white;
+    background: $black;
+    border-radius: 0;
+    font-family: $heading-font-family;
+    &:after {
+        content: "\f0da";
+        position: relative;
+        transition: 0.3s ease;
+        color: $white;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $fontawesome;
+        font-weight: 900;
+        margin-left: 10px;
+    } //after
+    &:hover {
+        color: $white;
+        background: $primary;
+        &:after {
+            content: "\f0da";
+            font-weight: 900;
+            margin-left: 10px;
+            position: relative;
+            transition: 0.3s ease;
+            color: $white;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: $fontawesome;
+        }
+    }
+} //btn black
+.btn-dark-gray {
+    color: $white;
+    background: $dark-gray;
+    border-radius: 0;
+    font-family: $heading-font-family;
+    &:after {
+        content: "\f0da";
+        position: relative;
+        transition: 0.3s ease;
+        color: $white;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: $fontawesome;
+        font-weight: 900;
+        margin-left: 10px;
+    } //after
+    &:hover {
+        color: $dark-gray;
+        background: $white;
+        &:after {
+            content: "\f0da";
+            margin-left: 10px;
+            font-weight: 900;
+            position: relative;
+            transition: 0.3s ease;
+            color: $dark-gray;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: $fontawesome;
+        }
+    }
+} //btn black
+
+.btn-outline-green, .btn-outline-primary {
+    border: 1px solid $primary;
+    color: $dark-gray;
+    background: transparent;
+    border-radius: 0;
+    font-family: $heading-font-family;
+    &:after {
+        content: "\f0da";
+        font-weight: 900;
+        font-family: $fontawesome;
+        margin-left: 10px;
+        position: relative;
+        transition: 0.3s ease;
+        color: $dark-gray;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+    &:hover {
+        border: 1px solid $primary;
+        color: $primary;
+        background: transparent;
+        &:after {
+            content: "\f0da";
+            font-weight: 900;
+            position: relative;
+            transition: 0.3s ease;
+            color: $primary;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: $fontawesome;
+            margin-left: 10px;
+        }
+    } //hover
+} //btn ouline green
+
+
+
+    .single_add_to_cart_button {
+        text-transform: capitalize;
+        font-family: $base-font-family !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+        color: $text-light !important;
+        padding: 14px 25px !important;
+        background: $primary !important;
+        letter-spacing: 1px !important;
+        text-decoration: none !important;
+        font-weight: $font-weight-semi-bold !important; 
+        @include font(1.8rem !important);
+        &:hover {
+            background: #39c6f9 !important;
+            color: $white !important;
+        }
+    }
+
+
+    .woocommerce-mini-cart__buttons {
+        .checkout {
+            margin-top: 10px !important;
+        }
+        a {
+            margin-bottom: 10px !important;
+            text-transform: capitalize !important;
+            font-weight: 600 !important;
+            font-family: $base-font-family !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            @include mq('phablet') {
+                width: auto !important;
+            }
+            color: $white !important;
+            font-size: 18px !important;
+    
+            border: 0 !important;
+            border-radius: 0 !important;
+            padding: 17px 31px !important;
+            background: $primary !important;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: $font-weight-semi-bold;
+            color: $white;
+            @include transition(all, 0.2s);
+    
+                &:hover {
+                    background: lighten($primary, 20%) !important;
+                    color: $white !important;
+                }
+                &:after {
+                    content: "\f0da";
+                    font-weight: 900;
+                    margin-left: 10px;
+                    position: relative;
+                    transition: 0.3s ease;
+                    color: $white;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    font-family: $fontawesome;
+                    margin-left: 10px;
+                    
+                }
+        }
+    }
+    

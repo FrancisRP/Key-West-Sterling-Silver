@@ -1,0 +1,124 @@
+// Default Woocommerce
+.woocommerce {
+	ul.products {
+		li.product {
+			a img {
+				width: 400px;
+				height: 180px;
+				object-fit: cover;
+				@include mq('tablet-wide') {
+					height: 260px;
+				}
+			}
+			.woocommerce-loop-product {
+				&__title {
+					@include font(2.4rem);
+				}
+			}
+			.price {
+				@include font(2rem);
+				font-weight: 600;
+			}
+		}
+	}
+	a.added_to_cart {
+		display: block;
+		font-weight: 500;
+	}
+	div.product {
+		p.price {
+			@include font(3.4rem);
+			font-weight: 600;
+		}
+	}
+}
+
+.single-product {
+	.product_meta {
+		margin-bottom: 20px;
+		> span {
+			display: block;
+			font-weight: 500;
+			@include font(2rem);
+			span, a {
+				font-weight: 300;
+			}
+		}
+	}
+	.fl-module-fl-woo-breadcrumb {
+		a {
+			color: $primary;
+		}
+		.woocommerce-breadcrumb {
+			@include font(1.8rem);
+		}
+	}
+	.price {
+		font-weight: 600;
+	}
+	.woocommerce-product-attributes {
+		th {
+			@include font(1.8rem);
+		}
+	}
+}
+
+// UABB modules
+.uabb-woocommerce a.add_to_cart_button.added::after {
+	right: 0;
+}
+
+.uabb-woo-categories {
+	li.product {
+		a {
+			img {
+				width: 400px;
+				height: 400px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.uabb-woo-categories-carousel .uabb-woo-slider-arrow-outside .slick-prev {
+	left: -50px;
+}
+
+// Mini cart
+.uabb-woo-mini-cart {
+	.uabb-mini-cart-header {
+		&-icon {
+			color: $text-dark !important;
+		}
+	}
+	.woocommerce-mini-cart-item {
+		font-weight: 500;
+		.quantity {
+			display: block;
+		}
+		img {
+			display: block;
+			max-width: 50%;
+		}
+	}
+	.woocommerce-mini-cart {
+		&__total {
+			margin-top: 40px;
+		}
+		&__buttons {
+			a {
+				padding: 7px;
+			}
+		}
+	}
+	.uabb-cart-style-off-canvas {
+		.uabb-mini-cart-items {
+			overflow: unset;
+		}
+		.uabb-cart-off-canvas__close-btn {
+			i {
+				font-size: 2rem;
+			}
+		}
+	}
+}

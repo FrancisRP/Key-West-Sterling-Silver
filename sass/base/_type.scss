@@ -1,0 +1,158 @@
+// ==[ Typography ]== //
+
+@function strip-unit($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+h1 {
+	@include font(51px);
+	font-weight: $font-weight-medium;
+	font-family: $heading-font-family;
+	line-height: 56px;
+}
+
+h2, h2 * {
+	@include font(35px);
+	color: $primary;
+	font-weight: $font-weight-medium;
+	font-family: $heading-font-family;
+}
+
+h3, .fl-module-heading h3.fl-heading, .fl-module-heading h3.fl-heading * {
+	@include font(25px);
+	color: $primary;
+	font-weight: $font-weight-medium;
+	font-family: $heading-font-family;
+}
+
+h4,
+h5,
+h6 {
+	@include font(20px);
+	font-weight: $font-weight-medium;
+	font-family: $heading-font-family;
+}
+
+/*===  Helper Classes ===*/
+
+.text-extra-bold {
+	font-weight: 800;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-semi-bold {
+	font-weight: 600;
+}
+
+.text-medium {
+	font-weight: 500;
+}
+
+.text-normal {
+	font-weight: 400;
+}
+
+.text-light {
+	font-weight: 300;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.fa,
+.fas,
+.far {
+	font-family:$fontawesome;
+	font-weight:900;
+}
+
+.fab {
+	font-family:$fontawesome-brands;
+}
+
+.site-content {
+	a {
+		&.read-more {
+			position: relative;
+			color: $dark-gray;
+			font-family: $heading-font-family;
+			text-transform: uppercase;
+			font-weight: $font-weight-medium;
+			text-decoration: none;
+			&:before {
+				content: "";
+				height: 2px;
+				background: $primary;
+				display: inline-block;
+				width: 50%;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				transition: 0.3s ease;
+			}
+			&:after {
+				content: "\f0da";
+				right: -8px;
+				position: relative;
+				transition: 0.3s ease;
+				color: $primary;
+				transform: rotate(90deg);
+				font-family:$fontawesome;
+			}
+			&:hover,
+			&:focus,
+			&:active {
+				color: $primary;
+				text-decoration: none;
+				&:before {
+					content: "";
+					height: 2px;
+					background: $dark-gray;
+					display: inline-block;
+					width: 100%;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+					transition: 0.3s ease;
+				}
+				&:after {
+					content: "\f0da";
+					right: -8px;
+					position: relative;
+					transition: 0.3s ease;
+					color: $dark-gray;
+					transform: rotate(90deg);
+					font-family:$fontawesome;
+				}
+			}
+			&:visited {
+				color: $dark-gray;
+				text-decoration: none;
+				&:before {
+					content: "";
+					height: 2px;
+					background: $primary;
+					display: inline-block;
+					width: 50%;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+					transition: 0.3s ease;
+				}
+				&:after {
+					content: "\f0da";
+					right: -8px;
+					position: relative;
+					transition: 0.3s ease;
+					color: $primary;
+					transform: rotate(90deg);
+					font-family:$fontawesome;
+				}
+			}
+		} //read more
+	} //a
+}

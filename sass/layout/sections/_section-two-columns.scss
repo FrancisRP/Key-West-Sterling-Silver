@@ -1,0 +1,19 @@
+.section-two-columns{
+    &__overlapping{
+        .left-column{
+            z-index:1;
+        }
+        .right-column{
+           position:relative;
+           z-index:2;
+        }
+    }
+    &__text-image {
+    	.fl-col-group {
+    		@include mq(tablet, max) {
+    			display: flex;
+    			flex-direction: column-reverse;
+    		}
+    	}
+    }
+}

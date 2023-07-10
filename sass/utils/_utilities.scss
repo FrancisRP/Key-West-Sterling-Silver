@@ -1,0 +1,24 @@
+// ---------- Use this file for global classes or other helper utilities
+
+//----- DO NOT REMOVE BELOW ------
+.skip-link {
+	position: absolute;
+	top: 0;
+	z-index: 9999;
+	right: 100%;
+	padding: 5px;
+	padding: 0.5rem;
+	font-size: 20px;
+	font-size: 2rem;
+	color: #000;
+	background: #fff;
+	&:focus {
+		right: auto;
+	}
+}
+//----- DO NOT REMOVE ABOVE ------
+
+
+.text-center {
+	text-align: center;
+}

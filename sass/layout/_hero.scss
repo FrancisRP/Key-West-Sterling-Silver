@@ -1,0 +1,41 @@
+.hero{
+    min-height:270px;
+    color:$white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .hero-content{
+        z-index:1;
+
+        h1 {
+            color: #000;
+        }
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(211,223,234,.5);
+    }
+    &__page{
+        background:$gray-100;
+        min-height:200px;
+        color:$dark-gray;
+        ul{
+            &.social{
+                font-weight:$font-weight-medium;
+                li{
+                    a{
+                        color:$primary;
+                        &:visited, &:hover, &:active{
+                            color:$dark-gray;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}

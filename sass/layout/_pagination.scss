@@ -1,0 +1,25 @@
+.pagination{
+    a{
+        border:2px solid $primary--light;
+        margin-right:8px;
+        color:$dark-gray;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.prev, &.next {
+            color:$dark-gray;
+        }
+    }
+    .current{
+        margin-right:8px;
+        background:$dark-gray;
+        color:$white;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

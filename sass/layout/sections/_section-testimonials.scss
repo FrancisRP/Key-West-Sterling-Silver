@@ -1,0 +1,30 @@
+.section-testimonial{
+    &__slider{
+        .uabb-testimonial{
+            
+            padding:20px 50px;
+
+            p {
+                font-family: $footer-font-family !important;
+                @include font(18px);
+                color: $black; 
+            }
+        }
+        .bx-pager {
+            a.bx-pager-link {
+                &.active {
+                    background: #5ba1e3;;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__sliders-two{
+        .uabb-testimonial{
+            background:$white;
+            padding:20px 50px;
+
+        }
+    }
+}
+

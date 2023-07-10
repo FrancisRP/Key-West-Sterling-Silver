@@ -1,0 +1,105 @@
+// -------------------
+// Default theme configuration & setup. Contains commonly used default styles for any typical project.
+// These styles may safely be removed/overwritten when starting a new project.
+// -------------------
+
+// --------------- SITE LAYOUT
+
+.container {
+	position: relative;
+	max-width: 1400px;
+}
+.section {
+	padding: 70px 0;
+}
+.site-header {
+	.site-header__inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+	.site-branding {
+		img {
+			height: auto;
+			max-width: 16em;
+		}
+	}
+
+}
+
+.screen-reader-text {
+	@include sr-only;
+  	@include sr-only-focusable;
+}
+
+.entry-meta {
+	color:$dark-gray;
+	text-transform: uppercase;
+	font-weight: $font-weight-medium;
+	font-family: $heading-font-family;
+	@include font(16px);
+}
+
+.has-line {
+	h3 {
+		span {
+			position: relative;
+			&:after {
+				content: "";
+				height: 3px;
+				background: $primary;
+				display: inline-block;
+				width: 9%;
+				position: absolute;
+				left: 0;
+				bottom: -20px;
+			}
+		}
+		
+	}
+}
+
+.has-line-small {
+	h3 {
+		span {
+			position: relative;
+			&:after {
+				content: "";
+				height: 1px;
+				background: $primary;
+				display: inline-block;
+				width: 4%;
+				position: absolute;
+				left: 0;
+				bottom: -20px;
+			}
+		}
+		
+	}
+}
+
+.footer-content {
+	.news-letter {
+		padding:0px 20px 0 20px;
+		@include mq('tablet-wide') {
+			padding: 50px 0;
+		}
+	}
+}
+
+.quantity {
+	input {
+		border: 1px solid #000 !important;
+		padding: 13px 8px !important; 
+	}
+}
+
+#uabb-quick-view-modal .uabb-lightbox-content {
+	width: 100%;
+}
+
+#uabb-quick-view-content div.summary {
+	overflow: visible;
+}
+
+

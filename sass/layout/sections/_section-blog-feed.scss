@@ -1,0 +1,170 @@
+.section {
+    &__blog {
+        .fl-module-post-grid {
+            .fl-post-column {
+                .fl-post-grid-text {
+                    a {
+                        &.fl-post-grid-more {
+                            position: relative;
+                            color: $black;
+                            font-family: $footer-font-family;
+                            text-transform: uppercase;
+                            font-weight: $font-weight-semi-bold;
+                            text-decoration: none;
+                            @include font(18px);
+                            &:before {
+                                content: "";
+                                height: 2px;
+                                background: $primary;
+                                display: inline-block;
+                                width: 100%;
+                                position: absolute;
+                                bottom: -5px;
+                                left: 0;
+                                transition: 0.3s ease;
+                            }
+                            &:after {
+                                content: "\f0da";
+                                font-weight: 900;
+                                right: -8px;
+                                position: relative;
+                                transition: 0.3s ease;
+                                color: $black;
+                                transform: rotate(90deg);
+                                font-family: $fontawesome;
+                            }
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $primary;
+                                text-decoration: none;
+                                &:before {
+                                    content: "";
+                                    height: 2px;
+                                    background: $dark-gray;
+                                    display: inline-block;
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                    transition: 0.3s ease;
+                                }
+                                &:after {
+                                    content: "\f0da";
+                                    font-weight: 900;
+                                    right: -8px;
+                                    position: relative;
+                                    transition: 0.3s ease;
+                                    color: $primary;
+                                    transform: rotate(90deg);
+                                    font-family: $fontawesome;
+                                }
+                            }
+                            &:visited {
+                                color: $dark-gray;
+                                text-decoration: none;
+                                &:before {
+                                    content: "";
+                                    height: 2px;
+                                    background: $primary;
+                                    display: inline-block;
+                                    width: 50%;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                    transition: 0.3s ease;
+                                }
+                                &:after {
+                                    content: "\f0da";
+                                    font-weight: 900;
+                                    right: -8px;
+                                    position: relative;
+                                    transition: 0.3s ease;
+                                    color: $primary;
+                                    transform: rotate(90deg);
+                                    font-family: $fontawesome;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.latest-news {
+    .fl-post-grid-text {
+        padding-left: 0 !important;
+        .fl-post-grid-title {
+            a {
+                font-family: $base-font-family !important;
+                @include font(25px);
+                position: relative;
+                    &:after {
+                        content: "";
+                        height: 1px;
+                        background: $primary;
+                        display: inline-block;
+                        width: 9%;
+                        position: absolute;
+                        left: 0;
+                        bottom: -20px;
+                    }
+            }
+        }
+
+        .fl-post-grid-content {
+            margin-top: 40px;
+
+            .fl-post-grid-more {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .fl-button-wrap {
+        a {
+            .fl-button-text {
+                text-transform: capitalize !important;
+                font-weight: 600 !important;
+                font-family: $base-font-family !important;
+            
+                color: $white !important;
+                @include font(1.8rem !important);
+            }
+            border: 0 !important;
+            border-radius: 0 !important;
+            padding: 10px 31px !important;
+            background: $primary !important;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: $font-weight-semi-bold; 
+
+            &:hover {
+                background: #6dc9e2 !important;
+                color: $white !important;
+                border: none !important;
+            }
+            &:after {
+                content: "\f0da";
+                font-weight: 900;
+                margin-left: 10px;
+                position: relative;
+                transition: 0.3s ease;
+                color: $white;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: $fontawesome;
+                margin-left: 10px;
+            }
+            .fl-button-icon {
+                display: none;
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,18 @@
+.uabb-woo-categories-carousel {
+    li.product-category {
+        margin: 0 15px;
+        .uabb-category {
+            &__title-wrap {
+                position: relative;
+                @include font(2.8rem);
+                bottom: 0;
+                left: 0;
+                background: transparent;
+                h2 {
+                    color: $text-dark;
+                    font-family: $base-font-family;
+                }
+            }
+        }
+    }
+}

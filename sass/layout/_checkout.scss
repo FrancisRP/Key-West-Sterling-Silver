@@ -1,0 +1,287 @@
+.woocommerce {
+    .woocommerce-form-coupon-toggle {
+        .woocommerce-info {
+           font-size: 18px !important;
+        }
+    }
+
+    .woocommerce-form-coupon {
+        border-color: #000 !important;
+        .form-row-first {
+            input {
+                border: 1px solid #000;
+                padding: 16px 10px;
+                width: 100% !important;
+            }
+            width: 100%;
+
+            @include mq('phablet') {
+                width: 47%;
+            }
+        }
+        
+
+        .form-row-last {
+            width: 100%;
+
+            @include mq('phablet') {
+                width: 47%;
+            }
+            button.button {
+                text-transform: capitalize !important;
+                font-weight: 600 !important;
+                font-family: $base-font-family !important;
+                width: 100% !important;
+                margin: 0 auto !important;
+                @include mq('phablet') {
+                    width: auto !important;
+                }
+                color: $white !important;
+                font-size: 18px !important;
+    
+                border: 0 !important;
+                border-radius: 0 !important;
+                padding: 17px 31px !important;
+                background: $primary !important;
+                letter-spacing: 1px;
+                text-decoration: none;
+                font-weight: $font-weight-semi-bold;
+                color: $white;
+                @include transition(all, 0.2s);
+    
+                &:hover {
+                    background: lighten($primary, 20%) !important;
+                    color: $white !important;
+                }
+                &:after {
+                    content: "\f0da";
+                    font-weight: 900;
+                    margin-left: 10px;
+                    position: relative;
+                    transition: 0.3s ease;
+                    color: $white;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    font-family: $fontawesome;
+                    margin-left: 10px;
+                
+                }
+            }
+        }
+        
+    }
+
+    .woocommerce-checkout {
+        .col-1 {
+            width: 100% !important;
+            max-width: 100% !important;
+
+            .woocommerce-billing-fields {
+                &__field-wrapper {
+                    .form-row {
+                        .woocommerce-input-wrapper {
+                            border: 1px solid #000;
+                            padding: 15px 5px;
+                        }
+                    }
+
+                    .address-field {
+                        .woocommerce-input-wrapper {
+                            border: none !important;
+                            padding: 0;
+
+                            .select2-selection {
+                                border-color: #000;
+                                border-radius: 0;
+                                height: 56px;
+                                padding: 14px 10px;
+
+                                &__arrow {
+                                    top: 17px;
+                                }
+                            }
+                        }
+                    }
+
+                    #billing_address_1_field {
+                        .woocommerce-input-wrapper {
+                            border: 1px solid #000 !important;
+                            padding: 15px 5px;
+                        }
+                    }
+
+                    #billing_address_2_field {
+                        margin-top: 15px;
+                        .woocommerce-input-wrapper {
+                            border: 1px solid #000 !important;
+                            padding: 15px 5px;
+                        }
+                    }
+
+                    #billing_city_field {
+                        .woocommerce-input-wrapper {
+                            border: 1px solid #000 !important;
+                            padding: 15px 5px;
+                        }
+                    }
+
+                    #billing_state_field {
+                        .woocommerce-input-wrapper {
+                            border: 0;
+                            padding: 0;
+                        }
+                    }
+
+                    #billing_postcode_field {
+                        .woocommerce-input-wrapper {
+                            border: 1px solid #000 !important;
+                            padding: 15px 5px;
+                        }
+                    }
+
+                    #billing_phone_field {
+                        .woocommerce-input-wrapper {
+                            border: none !important;
+                            input {
+                                padding: 15px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2 {
+            width: 100% !important;
+            max-width: 100% !important;
+
+            .woocommerce-additional-fields {
+                &__field-wrapper {
+                    .form-row  {
+                        .woocommerce-input-wrapper {
+                           textarea {
+                                height: 15em;
+                                border: 1px solid #000;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-checkout-review-order {
+        .woocommerce-checkout-review-order-table {
+            thead {
+                tr {
+                    .product-name,
+                    .product-total {
+                        font-size: 18px !important;
+        
+                         &:before {
+                            font-size: 18px !important;
+                        }
+        
+                        @include mq('phablet') {
+                            font-size: 20px !important;
+                        }
+                        
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    font-size: 20px !important;
+                    color: $primary;
+                    .product-total {
+                        color: #000 !important;
+                    }
+                }
+            }
+
+            tfoot {
+                .cart-subtotal,
+                .order-total {
+                    th {
+                        font-size: 18px !important;
+        
+                        &:before {
+                           font-size: 18px !important;
+                       }
+       
+                       @include mq('phablet') {
+                           font-size: 20px !important;
+                       }
+                    }
+                        
+                }
+
+                .cart-subtotal,
+                .order-total {
+                    td{
+                        font-size: 18px !important;
+        
+                        &:before {
+                           font-size: 18px !important;
+                       }
+       
+                       @include mq('phablet') {
+                           font-size: 20px !important;
+                       }
+                    }
+                        
+                  }
+
+            }
+        }
+
+        button.button {
+            
+            text-transform: capitalize !important;
+            font-weight: 600 !important;
+            font-family: $base-font-family !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            @include mq('phablet') {
+                width: auto !important;
+            }
+            color: $white !important;
+            font-size: 18px !important;
+
+            border: 0 !important;
+            border-radius: 0 !important;
+            padding: 17px 31px !important;
+            background: $primary !important;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: $font-weight-semi-bold;
+            color: $white;
+            @include transition(all, 0.2s);
+
+            &:hover {
+                background: lighten($primary, 20%) !important;
+                color: $white !important;
+            }
+            &:after {
+                content: "\f0da";
+                font-weight: 900;
+                margin-left: 10px;
+                position: relative;
+                transition: 0.3s ease;
+                color: $white;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: $fontawesome;
+                margin-left: 10px;
+            
+            }
+        }
+    }
+}

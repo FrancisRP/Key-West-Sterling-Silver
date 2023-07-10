@@ -1,0 +1,90 @@
+.blog-sidebar{
+    .widget{
+        margin-bottom: 40px;
+        .widget-title{
+            color:$primary;
+            font-family: $heading-font-family;
+            text-transform:uppercase;
+            margin: 0 0 20px;
+            @include font(2.5rem);
+        }
+        &.widget_search{
+            form{
+                display:flex;
+                align-items: center;
+                &.search-form{
+                    position: relative;
+                    background-color: $gray-100;
+                    width:100%;
+                    ::placeholder{
+                        @include font(1.8rem);
+                    }
+                    label{
+                        margin-bottom:0;
+                        width:80%;
+                    }
+                    .search-field{
+                        background-color: $gray-100;
+                        border: 0;
+                        height: 50px;
+                        width:80%;
+                        text-indent: 10px;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        font-family: $heading-font-family;
+                    }
+                    .search-submit{
+                        width:20%;
+                        background-color: $gray-100;
+                        border:0;
+                        text-indent: -9999px;
+                        background-image: url('/wp-content/uploads/2020/05/search-solid.svg');
+                        background-size: 20px;
+                        background-repeat: no-repeat; 
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        &.widget_categories{
+            ul {
+                list-style-type: none;
+                padding-inline-start: 20px;
+                li {
+                    margin-bottom: 20px;
+                    line-height: 1.1;
+                    a {
+                        color:$dark-gray;
+                        font-family: $heading-font-family;
+                        font-weight: $font-weight-normal;
+                        @include font(16px);
+                        &:hover{
+                            color: $primary--light;
+                        }
+                    }
+                }
+            }
+        }
+        &.gform_widget{
+            .gform_wrapper{
+                background: $primary--light;
+                padding: 20px;
+                .gform_title {
+                    color: $white;
+                    text-transform: uppercase;
+                    text-align: center;
+                    line-height: 1.1;
+                    margin-top: 0;
+                    @include font(2.5rem);
+                }
+                .gform_footer {
+                    margin: 0;
+                    .gform_button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
